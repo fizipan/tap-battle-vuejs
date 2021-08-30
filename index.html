@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tap Battle</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container" id="app">
+      <div class="player" @click="addHeightBlue()" :style="{height: blue + '%'}" id="blue"></div>
+      <div class="player" @click="addHeightPurple()" :style="{height: purple + '%'}" id="purple"></div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+      const EventHandling = {
+        data() {
+          return {
+            blue: 50,
+            purple: 50,
+          };
+        },
+        methods: {
+          addHeightBlue() {
+            this.blue = this.blue + 1;
+            this.purple = this.purple - 1;
+          },
+          addHeightPurple() {
+            this.purple = this.purple + 1;
+            this.blue = this.blue - 1;
+          },
+        },
+      };
+      Vue.createApp(EventHandling).mount('#app');
+    </script>
+  </body>
+</html>

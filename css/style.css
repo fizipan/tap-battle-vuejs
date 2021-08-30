@@ -1,0 +1,21 @@
+body {
+  background-color: rgb(180, 180, 180);
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  height: 100vh;
+}
+
+.container .player {
+  width: 100%;
+}
+
+.container .player#blue {
+  background-color: blue;
+}
+
+.container .player#purple {
+  background-color: purple;
+}
